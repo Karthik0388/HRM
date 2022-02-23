@@ -1,0 +1,76 @@
+<section class="container bg-white my-2">
+  <article class="row">
+    <div class="col-3 bg-light text-center">
+      {{#if user}}
+      <span class="editIcon">
+        <a href="/employee/edit-emp/{{payload._id}}"><img
+            src="https://cdn-icons-png.flaticon.com/128/1160/1160515.png"
+            alt=""
+            title="edit profile"
+          /></a>
+      </span>
+      {{else}}
+      {{/if}}
+      <figure class="my-2 p-2">
+        <img
+          class="img-thumbnail p-2"
+          src="{{trimFirst6Char payload.emp_photo.0.path}}"
+          alt="{{payload.emp_name}}"
+        />
+      </figure>
+      <h2
+        class="h2 text-uppercase font-weight-bold text-primary p-2 text-center"
+      >{{payload.emp_name}}</h2>
+      <p class="lead">{{payload.emp_email}}</p>
+    </div>
+    <div class="col-9 bg-white my-2 p-2 container-fluid">
+      <main>
+        <h2
+          class="text-uppercase border-bottom font-weight-bold text-dark p-2 container-fluid ml-2"
+        >{{payload.emp_name}}</h2>
+        {{#if user}}
+        <form
+          class="float-right text-danger"
+          method="post"
+          action="/employee/delete-emp/{{payload._id}}?_method=DELETE"
+        >
+          <input type="hidden" name="_method" value="DELETE" />
+          <button class="btn btn-danger">delete</button>
+        </form>
+        {{else}}
+        {{/if}}
+        <div class="container-fluid">
+          <p class="lead p-1">Employee id :
+            {{payload.emp_id}}
+          </p>
+          <p class="lead p-1">Salary :
+            {{payload.emp_salary}}
+            INR
+          </p>
+          <p class="lead p-1">Education :
+            {{payload.emp_edu}}
+          </p>
+          <p class="lead p-1">Experience :
+            {{payload.emp_exp}}
+          </p>
+          <p class="lead p-1">Gender :
+            {{payload.emp_gender}}
+          </p>
+          <p class="lead p-1 text-secondary">Designation :
+            {{payload.emp_des}}
+          </p>
+          <p class="lead p-1 text-secondary">Skills :
+            {{payload.emp_skills}}
+          </p>
+          <p class="lead p-1 text-secondary">City :
+            {{payload.emp_location}}
+          </p>
+          <p class="lead p-1 text-secondary">Contact number :
+            {{payload.emp_phone}}
+          </p>
+
+        </div>
+      </main>
+    </div>
+  </article>
+</section>

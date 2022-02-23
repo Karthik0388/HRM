@@ -1,0 +1,51 @@
+<section id="authBlock my-4">
+  <article class="col-md-3 mx-auto bg-white card my-4">
+    <div class="card-body">
+      <h2
+        class="h2 font-weight-bold text-secondary text-uppercase py-2"
+      >Register</h2>
+      <form action="/auth/register" method="post">
+        <div class="form-group">
+          <label for="username">username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            id="username"
+            placeholder="enter username"
+          /></div>
+        <div class="form-group">
+          <label for="email">email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="enter an email"
+          /></div>
+        <div class="form-group">
+          <label for="password">password</label><input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="enter a password"
+          /></div>
+        <div class="form-group">
+          <label for="confirmpassword">confirm password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password1"
+            id="confirmpassword"
+            placeholder="enter confirm password"
+          /></div>
+        <div class="form-group">
+          <button
+            class="btn btn-primary btn-block my-2 text-uppercase font-weight-bold"
+          >register</button>
+        </div>
+      </form>
+    </div>
+  </article>
+</section>

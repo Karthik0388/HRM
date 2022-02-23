@@ -1,0 +1,177 @@
+<section class="container bg-white my-4">
+  <article>
+    <main class="employeeBlock">
+      <h2 class="h2 text-uppercase py-3 font-weight-bold text-success">update
+        employee</h2>
+      <form
+        action="/employee/edit-emp/{{editPayload._id}}?_method=PUT"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="row">
+          <div class="col-3 form-group">
+            <label for="emp_name">emp name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="emp_name"
+              id="emp_name"
+              placeholder="enter employee name"
+              value="{{editPayload.emp_name}}"
+              required
+            /></div>
+
+          <div class="col-3 form-group">
+            <label for="emp_id">id</label><input
+              type="text"
+              class="form-control"
+              name="emp_id"
+              id="emp_id"
+              value="{{editPayload.emp_id}}"
+              placeholder="enter employee id"
+              required
+            /></div>
+          <div class="col-3 form-group">
+            <label for="emp_salary">salary</label><input
+              type="text"
+              class="form-control"
+              name="emp_salary"
+              id="emp_salary"
+              placeholder="enter employee salary"
+              value="{{editPayload.emp_salary}}"
+              required
+            /></div>
+          <div class="col-3 form-group">
+            <label for="emp_edu">education</label>
+            <select name="emp_edu" id="emp_edu" class="form-control" required>
+              <option value="be">BE</option>
+              <option value="btech">BTECH</option>
+              <option value="bca">BCA</option>
+              <option value="mca">MCA</option>
+              <option value="msc">MSC</option>
+            </select>
+          </div>
+          <div class="col-3 form-group">
+            <label for="emp_exp">experience</label>
+            <input
+              type="text"
+              class="form-control"
+              id="emp_exp"
+              placeholder="enter employee experience"
+              name="emp_exp"
+              value="{{editPayload.emp_exp}}"
+              required
+            /></div>
+          <div class="col-3 form-group">
+            <label for="emp_gender">gender</label>
+            <div>
+              <input
+                type="radio"
+                class="form-check-input1"
+                name="emp_gender"
+                id="emp_gender"
+                value="{{editPayload.emp_gender}}"
+              />Male
+              <input
+                type="radio"
+                class="form-check-input1"
+                name="emp_gender"
+                id="emp_gender"
+                value="{{editPayload.emp_gender}}"
+              />Female
+              <input
+                type="radio"
+                class="form-check-input1"
+                name="emp_gender"
+                id="emp_gender"
+                value="{{editPayload.emp_gender}}"
+              />others
+            </div>
+
+          </div>
+          <div class="col-3 form-group">
+            <label for="emp_location">location</label>
+            <input
+              type="text"
+              class="form-control"
+              id="emp_location"
+              placeholder="enter employee location"
+              name="emp_location"
+              value="{{editPayload.emp_location}}"
+              required
+            />
+          </div>
+          <div class="col-3 form-group">
+            <label for="emp_des">Designation</label>
+            <input
+              type="text"
+              class="form-control"
+              id="emp_des"
+              placeholder="enter employee Designation"
+              name="emp_des"
+              value="{{editPayload.emp_des}}"
+              required
+            />
+          </div>
+          <div class="col-3 form-group">
+            <label for="emp_email">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="emp_email"
+              placeholder="enter employee Email"
+              name="emp_email"
+              value="{{editPayload.emp_email}}"
+              required
+            />
+          </div>
+          <div class="col-3 form-group">
+            <label for="emp_phone">Phone number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="emp_phone"
+              placeholder="enter employee Phone number"
+              value="{{editPayload.emp_phone}}"
+              name="emp_phone"
+              required
+            />
+          </div>
+          <div class="col-3 form-group">
+            <label for="emp_photo">Employee photo</label>
+            <input
+              type="file"
+              class="form-control"
+              id="emp_photo"
+              name="emp_photo"
+            />
+          </div>
+          <div class="col-3 form-group">
+            <label for="emp_skills">employee Skills</label>
+            <div>
+              <input
+                type="checkbox"
+                name="emp_skills"
+                value="javascript"
+                checked
+              />Javascript
+              <input type="checkbox" name="emp_skills" value="react" />React
+              <input type="checkbox" name="emp_skills" value="nodejs" />Nodejs
+              <input
+                type="checkbox"
+                name="emp_skills"
+                value="expressjs"
+              />Expressjs
+            </div>
+
+          </div>
+          <div class="form-group col-12">
+            <button class="btn btn-success">submit</button>
+          </div>
+        </div>
+
+      </form>
+    </main>
+  </article>
+</section>
